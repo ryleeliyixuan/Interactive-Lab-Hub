@@ -2,41 +2,6 @@
 
 # Staging Interaction
 
-In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
-
-There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
-
-For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like. 
-
-_Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
-
-
-
-## Prep
-
-### To start the semester, you will need:
-1. Set up your own Github "Lab Hub" repository to keep all you work in record by [following these instructions](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Fall/readings/Submitting%20Labs.md).
-2. Set up the README.md for your Hub repository (for instance, so that it has your name and points to your own Lab 1) and [learn how to](https://guides.github.com/features/mastering-markdown/) organize and post links to your submissions on your README.md so we can find them easily.
-3. (extra: Learn about what exactly Git is from [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F).)
-
-### For this lab, you will need:
-1. Paper
-2. Markers/ Pens
-3. Scissors
-4. Smart Phone -- The main required feature is that the phone needs to have a browser and display a webpage.
-5. Computer -- We will use your computer to host a webpage which also features controls.
-6. Found objects and materials -- You will have to costume your phone so that it looks like some other devices. These materials can include doll clothes, a paper lantern, a bottle, human clothes, a pillow case, etc. Be creative!
-
-### Deliverables for this lab are: 
-1. Storyboard
-1. Sketches/photos of costumed device
-1. Any reflections you have on the process
-1. Video sketch of the prototyped interaction
-1. Submit the items above in the lab1 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same from each person in the group.
-
-### The Report
-This README.md page in your own repository should be edited to include the work you have done (the deliverables mentioned above). Following the format below, you can delete everything but the headers and the sections between the **stars**. Write the answers to the questions under the starred sentences. Include any material that explains what you did in this lab hub folder, and link it in your README.md for the lab.
-
 ## Lab Overview
 For this assignment, you are going to:
 
@@ -52,82 +17,77 @@ E) [Costume the device](#part-e-costume-the-device)
 
 F) [Record the interaction](#part-f-record)
 
-Labs are due on Mondays. Make sure this page is linked to on your main class hub page.
 
 ## Part A. Plan 
 
-To stage the interaction with your interactive device, think about:
+### Setting, Players, Actions, and Goals
 
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
+The interactive device I am about to stage is a rave wristband that detects the bpm (beats per minute) in sound and displays different colors of light according to the light spectrum. This wristband is designed for ravers who attend music festivals like Coachella and EZoo.
 
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
+In a rave, the wristband is the event entry pass. Every raver needs to wear this rave wristband in the setting. Putting hands up in the air and waving them is the most common action when audiences enjoy the music during a rave. This must-have item will engage ravers in the event by providing a visual perception of music. 
+As tracks change their tempo throughout the course of the tune, the wristband will display different colors of lights. The higher the BPM, the longer the wavelength of light displayed on the wristband. The relationship between color and wavelength can be found below.
 
-_Activity:_ What is happening between the actors?
+![Light Spectrum](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/lab1-light-spectrum-explained.jpeg)
 
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
+For instance, a tune may start at 88 BPM, gradually build up to 128 BPM, and go back to 100 BPM during the drop. Accordingly, the wristband will first display a green light. During the build-up, the light will transit from green to yellow and finally turn red as the track reaches the climax. As the beats drop, the light will change from red to yellow. 
 
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
+### StoryBoard Version 1
+![StoryBoard_V1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/lab1-storyboard-v1.jpeg)
 
-\*\***Describe your setting, players, activity and goals here.**\*\*
+### Feedback and StoryBoard Version 2
+I received feedback regarding the representation of sounds with different tempos. The text boxes labeling BPMs were not enough. It would be better if more visualization were added to the pictures. In response to it, I added “lightning” icons to further illustrate sounds with different tempos. 
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
-
-\*\***Include a picture of your storyboard here**\*\*
-
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
-
-\*\***Summarize feedback you got here.**\*\*
+![StoryBoard_V2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/lab1-storyboard-v2.jpg)
 
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
-\*\***Are there things that seemed better on paper than acted out?**\*\*
+**Are there things that seemed better on paper than acted out?**
 
-\*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+It's easy to represent different tempos in the storyboard with texts and graphs. However, it may be hard for audiences to detect the change of tempo if the change is not very obvious.
+
+**Are there new ideas that occur to you or your collaborators that come up from the acting?**
+
+To solve the above issue, I will choose a track that has an obvious build-up before the drop. Moreover, I noticed that the change of tempo was a continuous process. So it would be better if we gradually change the light from green to red along the light spectrum instead of suddenly changing it from one color to another. 
 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
 
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
+### Feedback on Tinkerbelle
 
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
-\*\***Give us feedback on Tinkerbelle.**\*\*
+I used Mac OS and installed Python 3.8.8. I failed to run [Tinkerbelle](https://github.com/FAR-Lab/tinkerbelle) on my mac as port 5000 isn't listening to the page. I tried to configure my mac using the methods mentioned on Slack but also failed.
 
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
+Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it.
 
-\*\***Include your first attempts at recording the set-up video here.**\*\*
+[First Attempt at Recording the Set-Up Video](https://youtu.be/uOmw8Q1s1e8)
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
-\*\***Show the follow-up work here.**\*\*
+[Follow Up Video with Updates](https://youtu.be/m73bMSnwrbI)
 
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
+### Develop the Device
 
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
+![Rave_Wristband](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/rave-wristband-device.jpg)
 
-\*\***Include sketches of what your device might look like here.**\*\*
-
-\*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+### Concerns or Opportunities that Influence the Way I've Designed the Device
+* The wristband is a one-size item. The strong elastic trap will allow users to adjust it for different sizes of arms. 
+* During the rave, people need to wave their hands. The release buckle ensures that users can wear the wristband without worrying about shaking it off.
 
 
 ## Part F. Record
 
-\*\***Take a video of your prototyped interaction.**\*\*
+[Final Version](https://youtu.be/ZRmE8tA-3Ag)
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+Color Picker Used in the Staging: http://color.aurlien.net/ 
+
 
 
 
