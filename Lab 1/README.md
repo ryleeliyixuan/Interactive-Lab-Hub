@@ -74,11 +74,15 @@ I used Mac OS and installed Python 3.8.8. I failed to run [Tinkerbelle](https://
 ## Part D. Wizard the device
 **Include your first attempts at recording the set-up video here.**
 
-[First Attempt at Recording the Set-Up Video](https://youtu.be/uOmw8Q1s1e8)
+[First Attempt at Recording the Set-Up Video with iPhone](https://youtu.be/m4rGtI4rGuY)
+
+I realized that colors should change continuously so I adopted this [color picker](http://color.aurlien.net/) on Mac instead.
+
+[First Attempt at Recording the Set-Up Video with Color Pickers on Mac](https://youtu.be/uOmw8Q1s1e8)
 
 **Show the follow-up work here.**
 
-[Follow Up Video with Updates](https://youtu.be/m73bMSnwrbI)
+[Follow Up Video with Music](https://youtu.be/m73bMSnwrbI)
 
 
 ## Part E. Costume the device
