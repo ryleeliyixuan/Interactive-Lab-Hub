@@ -33,6 +33,8 @@ As tracks change their tempo throughout the course of the tune, the wristband wi
 
 For instance, a tune may start at 88 BPM, gradually build up to 128 BPM, and go back to 100 BPM during the drop. Accordingly, the wristband will first display a green light. During the build-up, the light will transit from green to yellow and finally turn red as the track reaches the climax. As the beats drop, the light will change from red to yellow. 
 
+This device can also monitor ravers' health status and alert while there's a health issue. If ravers have a sudden tachycardia (ie. abnormally fast heartbeat), it could flash in a predetermined fashion (ie. flashing blue light). Security members at the rave could look for individuals in need of medical attention and save them before things go wrong.
+
 ### StoryBoard Version 1
 
 **Include a picture of your storyboard here**
@@ -46,6 +48,15 @@ For instance, a tune may start at 88 BPM, gradually build up to 128 BPM, and go 
 I received feedback regarding the representation of sounds with different tempos. The text boxes labeling BPMs were not enough. It would be better if more visualization were added to the pictures. In response to it, I added “lightning” icons to further illustrate sounds with different tempos. 
 
 ![StoryBoard_V2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/lab1-storyboard-v2.jpg)
+
+### Feedback and StoryBoard Version 3
+
+**Summarize feedback you got here.**
+
+During part 2 of my staging, I received feedback proposing the idea of multifuncational wristband: Magdalena suggested that this wristband could be designed for multiple purposes (eg. track purchases/payments). Mayur proposed that we could monitor the raver’s health status using his/her wristband. If they are dehydrated and need to be taken to the medical tent, it could flash in a predetermined fashion. Security members at the rave could look for individuals in need of medical attention and save them before things go wrong.
+
+Updated version can be found below.
+![storyboard - final version](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/lab1-storyboard-v3.jpg).
 
 
 ## Part B. Act out the Interaction
@@ -105,13 +116,15 @@ I realized that colors should change continuously so I adopted this [color picke
 
 **Take a video of your prototyped interaction.**
 
-[Final Version](https://youtu.be/ZRmE8tA-3Ag)
+[Part1_Final Version](https://youtu.be/ZRmE8tA-3Ag)
+
+[This is the final video of prototyping the device!!!!!](https://youtu.be/9WFtc_z9H5c).
 
 **Please indicate anyone you collaborated with on this Lab.**
 
 Color Picker Used in the Staging: http://color.aurlien.net/ 
 
-
+Thank Daan van der Zwaag, Magdalena Yin Horowitz, and Mayur Bhandary for feedback.
 
 
 # Staging Interaction, Part 2 
@@ -121,9 +134,12 @@ This describes the second week's work for this lab activity.
 
 ## Prep (to be done before Lab on Wednesday)
 
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
+**Summarize feedback from your partners .**
 
-\*\***Summarize feedback from your partners here.**\*\*
+**Multifunctional Wristband:** Magdalena suggested that this wristband could be designed for multiple purposes (eg. track purchases/payments). Mayur purposed that we could monitor the raver’s health status using his/her wristband. If they are dehydrated and need to be taken to the medical tent, it could flash in a predetermined fashion. Security members at the rave could look for individuals in need of medical attention and save them before things go wrong.
+
+Thank Daan van der Zwaag, Magdalena Yin Horowitz, and Mayur Bhandary for the valuable feedback.
+
 
 ## Make it your own
 
@@ -132,4 +148,14 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative!
 3) We will be grading with an emphasis on creativity. 
 
-\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+**Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**
+### Improvment
+In response to the feedback, I added the below functionality: this rave wristband can also monitor ravers' health status and alert while there's a health issue. If ravers have a sudden tachycardia (ie. abnormally fast heartbeat), it could flash in a predetermined fashion (ie. flashing blue light). Security members at the rave could look for individuals in need of medical attention and save them before things go wrong.
+
+### Storyboard - Final Version 
+![updated storyboard - this is the final version](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%201/lab1-storyboard-v3.jpg).
+
+
+### Final Video
+[This is the final video of prototyping the device!](https://youtu.be/9WFtc_z9H5c).
+
