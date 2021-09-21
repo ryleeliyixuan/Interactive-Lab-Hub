@@ -197,7 +197,7 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 ![Storyboard](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%202/lab2-interaction.jpg)
-* Randomlly generate time-killing activities depends on the time (morning/afternoon/evening) (so it wouldn't recommend users to walk their dogs at 3AM)
+* Randomlly generate time-killing activities depending on the time (morning/afternoon/evening) (so it wouldn't recommend users to walk their dogs at 3AM)
 * Present a battery-like interface (0 - 25%: red; 25% - 50%: orange; 50% - 75%: yellow; 75% - 100% green)
 
 # Prep for Part 2
