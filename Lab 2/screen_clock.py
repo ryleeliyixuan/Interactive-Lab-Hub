@@ -4,6 +4,8 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+from time import strftime, sleep
+from datetime import datetime
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -53,7 +55,9 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 22)
+fontSmall = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
+
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -63,8 +67,27 @@ backlight.value = True
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    # draw.rectangle((0, 0, 50, height), outline=0, fill="#FFFF33")
 
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py
+    # Display percentage of the day
+    hr = time.strftime("%H")
+    mo = time.strftime("%M")
+    sec = time.strftime("%S")
+    now = int(hr) * 60 * 60 + int(mo) * 60 + int(sec)
+    percentage = round(now / 86400 * 100, 3)
+    textDisp = str(percentage) + "% of the Day"
+    showWidth = int(width * percentage / 100);
+    draw.rectangle((0, 0, showWidth, height), outline=0, fill="#00D100")
+    draw.text((10, height/2.5), textDisp, font=font, fill="#FFFFFF")
+    # print (strftime("%m/%d/%Y %H:%M:%S"), end="", flush=True)
+
+    # Calculate the hours left
+    timeLeft = str(24 - int(hr) - 1) + " hrs " + str(60 - int(mo) - 1) + " mins to Go"
+    draw.text((width * 0.25, height * 0.75), timeLeft, font=fontSmall, fill="#FFFFFF")
+
+    # Display Guideline for the buttoms  
+    draw.text((0, 20), "<- find ways to kill time", font=fontSmall, fill="#FFFFFF")
 
     # Display image.
     disp.image(image, rotation)
