@@ -206,6 +206,8 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
+* Comment from Ruoyu Zhou: Beautiful design! For further steps, maybe you can change the options provided at different time stages. Like when the battery bar shows that there are mor than 75% of time, you can offer 4 choices on the screen, at 25% of time 2 choices, and buttons, plus the extended buttons stand for one of the choices, or use the joystick to randomly choose one if it is hard for the user to make decisions among multiple choices
+
 # Lab 2 Part 2
 
 Pull Interactive Lab Hub updates to your repo.
