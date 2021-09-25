@@ -199,6 +199,8 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 [Video of My PiClock AKA Time Killer Dice: Part 1](https://youtu.be/N45TvNd_ff8)
 
+[Video of My PiClock AKA Time Killer Dice: Final!!!!!CLICK THIS ONE](https://youtu.be/h2fnHiAEwBI)
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 ![Storyboard](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%202/lab2-interaction.jpg)
@@ -209,8 +211,9 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
   
-
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+
+* Comment from Jay: Make an animation of dice! Just let the device present a series of rolling images while pressing the button.
 
 * Comment from Ruoyu Zhou: Beautiful design! For further steps, maybe you can change the options provided at different time stages. Like when the battery bar shows that there are mor than 75% of time, you can offer 4 choices on the screen, at 25% of time 2 choices, and buttons, plus the extended buttons stand for one of the choices, or use the joystick to randomly choose one if it is hard for the user to make decisions among multiple choices
 
@@ -219,6 +222,10 @@ After that, Git will ask you to login to your GitHub account to push the updates
 Pull Interactive Lab Hub updates to your repo.
 
 Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
+
+* I modified the code and implemented "Part G" with some modifications (change "<- next" to "<- roll the dice") and adopted Jay's idea (thanks).
+
+[Video of My PiClock AKA Time Killer Dice: Final!!!!!](https://youtu.be/h2fnHiAEwBI)
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
