@@ -115,15 +115,36 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+For this lab, I aim to develop a Cornell Tech Surveillance Test Chatbot. I found some works are repetitive. This machine would lead to less interaction between students and staff on the testing sites by facilitating the process of pre-testing inquiry (ie. recording basic information and delivering testing tube). If students need assistance from staff, they could also seek assistance from them by pressing the button on the machine. 
+
+![storyboard](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-storyboard.jpg)
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
+
+| Stage  | Situation     | Dialogue from the Machine                                                                                                                                              | Expected Answer from Users |
+|--------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| Pre    | Basic Inquiry | Welcome to Cornell Tech Surveillance Testing! What's your first name?                                                                                                  | First Name                 |
+| Pre    | Basic Inquiry | Hello, what's your last name?                                                                                                                                          | Last Name                  |
+| Pre    | Basic Inquiry | Is your netID xxxx? Please answer with yes or no.                                                                                                                      | Yes or No                  |
+| During | Guide         | This is your testing kit. Please record the unique barcode on the testing tube for future test result access.                                                          | N/A                        |
+| During | Guide         | If you need assistance, please press the red button, staff will come to you shortly. If you finished testing, place the tube in the bucket and press the green button. | Press red or green button  |
+| After  | Guide         | Thanks for caring the Cornell Tech community by participating the weekly surveillance testing. You can leave now.                                                      | N/A                        |
 
 ### Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
+[Interactive Device Design - Lab 3 Part 1 - Acting out the dialogue](https://youtu.be/47sEtJ1ga1g)
+
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+
+The dialogue seemed different than what I imagined when it was acted out in the following ways: 
+* The machine is expecting a input of first/last name such as "WU". But users tend to spell out their names (eg. "W-U" instead of "WU").
+* Users may answer their preffered name (eg. "Cathy") instead of their legal names that are recorded in the Cornell Tech system (eg. "Kaixi).
+
+In response to the above feedbacks, I will revise the questions. 
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
