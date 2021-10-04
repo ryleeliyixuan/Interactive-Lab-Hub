@@ -76,6 +76,8 @@ One thing you might need to pay attention to is the audio input setting of Pi. S
 
 [zipcode.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/speech2text/zipcode.py)
 
+![AskForZipCode_Demo_Output](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/speech2text/askForZipCode_Output.png)
+
 [Video link of this demo can be found here](https://youtu.be/jK1FOsGXc3k)
 
 Bonus Activity:
