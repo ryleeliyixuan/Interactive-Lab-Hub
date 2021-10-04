@@ -56,7 +56,7 @@ You can also play audio files directly with `aplay filename`. Try typing `aplay 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
-The file "echoName" is my own shell file that would have my Pi greet me by name: [echoName.sh](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/echoName.sh)
+[echoName.sh](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/echoName.sh)
 
 [Video link of this demo can be found here](https://youtu.be/Cml-azmZnVg)
 
@@ -72,9 +72,9 @@ One thing you might need to pay attention to is the audio input setting of Pi. S
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
 
-[askZipCode.sh](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/echoName.sh)
+[askZipCode.sh](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/speech2text/askZipCode.sh)
 
-[zipcode.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/echoName.sh)
+[zipcode.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/speech2text/zipcode.py)
 
 [Video link of this demo can be found here](https://youtu.be/jK1FOsGXc3k)
 
