@@ -205,6 +205,9 @@ The system should:
 * require participants to speak to it. 
 
 *Document how the system works*
+* All the scripts can be found [here](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/tree/Fall2021/Lab%203/covidtestbot)
+* This is [the main class](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/covidtestbot/main.py) 
+![Workflow](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-Flowchart.jpg)
 
 *Include videos or screencaptures of both the system and the controller.*
 ### Final Video of Prototyping
@@ -225,18 +228,21 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+* Work well: The workflow the system performed was pretty clear and easy to follow. Since I only implemented one button, it's easy to use and users would not confuse the usage/functionality of buttons. And the workflow of scanning barcode worked so well as it features methods of using voice to interact, using button to take actions, and using camera to record info.
+* Didn't work well: Some users may not fully understand the voice guidelines as some of the lines may take too long (~8s). It would be better if we repeat the voice guidlines again if there hears no response from users. Or we segment lengthy lines into a few pieces so it's easier for users to understand them. 
 
-### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+### What worked well about the controller and what didn't well 
+* Work well: I used storyboards, flowcharts, role-playing and WoZ as my prototyping methods of choice. The storyboards and flowcharts illustrate the workflow well in a structured manner. The controller was easy to use, especially the text to speech functionality.
+* Didn't work well: The speech recording functionality required users to speak directly to the USB microphone. It might be inconvenient for users to bend over and talk directly to the USB mircophone. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-
-\*\**your answer here*\*\*
+* Users may not answer our questions in a way that aligned with our anticipation. We need to think of all possible reactions from users (eg. misunderstand the questions, record the wrong info, do not hear the questions well).
+* The speech to text functionality could streamline the process of data recording. We can parse the video file into text strings and store strings in the databases.  
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-
-\*\**your answer here*\*\*
+* The speech to text functionality could streamline the process of data recording. We can parse the video file into text strings and store them in the databases.
+* We scanned the barcode. We can use computer vision to extract text/number on the barcode and store the info in our databases.
+* We can even use the camera to take a photo of users' Cornell ID, so they don't have to record firstname/lastname/netid one by one. Or we can use a card reader. 
 
