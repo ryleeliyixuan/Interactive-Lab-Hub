@@ -1,0 +1,1 @@
+fswebcam -r 640X480 -S 20 barcode.jpeg

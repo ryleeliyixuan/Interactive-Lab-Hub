@@ -1,0 +1,1 @@
+AUDIODEV=hw:1 play $1
