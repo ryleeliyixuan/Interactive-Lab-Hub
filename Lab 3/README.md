@@ -155,12 +155,48 @@ In the [demo directory](./demo), you will find an example Wizard of Oz project. 
 
 For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
 
+### Feedback:
+* I love how the device is focused on a very well-constrained problem that involves going through a specific series of steps. I feel like it's very easy to understand what the goal is and what success means for the device. I wish the device could do something that speeds up the instruction and exchange. For example, if the user could just speak and have the device parse their information, or (for pt2 of the lab) if the device can scan bar codes.
+* This is so based on our life and interesting, the storyboard, and video demo are easy to understand. The part where the device gives the testing tube might be hard to implement. 
+* Two buttons would be too much. Think of the functinality of your buttons. 
+
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+* My original plan is to prep the testing tube with designated barcode based on net id beforehand, read users' net id, deliver the testing tude with the pre-assigned barcode. Since the part where the device gives the testing tube might be hard to implement, it would be better that we place all the available testing tubes on the right side, ask users pick one, and then record the barcode on the testing tube. 
+* I streamlined the process of barcode recording by allowing users to scan the barcodes using the extended camera on the Raspberry Pi. In this sense, users don't have to take out their phones and take the photos by themselves.
+* I paraphrased the questions so that the expected answers could be more clear. (eg. from "what's your first time?" to "what's your first time? Please spell it out.") And I added dialogue that verifies the answers with users (eg. "first name verified. Your first name is xxxxx").
+* I used just one button instead of two since users don't have to choose between multiple choices (eg. A or B). Two buttons may be redundant. 
+* I changed the timing between each questions. Timing between those questions groupped into the same section was 0.5s. Timing between different sections was 1s.
+* I assumed that staff may be busy and did not show up due to high concurrency of requests. Thus, I allowed users to press the button again to notify the admin till the staff show up.  
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+* I displayed the current step on the screen of the Raspberry Pi. Moreover, I used the screen to display the guidelines for PCR-testing so that first-time users can follow the steps.
+* I used the LED light on the red button to state the status of barcode scanning. (ie. ON: barcode scanning in progress)
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
 
+### Storyboard
+![storyboard](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-storyboard-v2-3.jpg)
+![storyboard](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-storyboard-v2-2.jpg)
+![storyboard](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-storyboard-v2-1.jpg)
+
+### Dialogue
+| Stage        | Type          | Dialogue from the Machine                                                                                                                                                                                                                                                                                      | Excepted Answer from Users |
+|--------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| Record INFO  | Basic Inquiry | Welcome to Cornell Tech Surveillance Testing! What's your first name? Please spell it out.                                                                                                                                                                                                                     | First Name (eg. R-Y-L-E-E) |
+| Record INFO  | Verification  | First name verified. Your first name is: xxx                                                                                                                                                                                                                                                                   | N/A                        |
+| Record INFO  | Basic Inquiry | What's your last name? Please spell it out.                                                                                                                                                                                                                                                                    | Last Name (eg. L-I)        |
+| Record INFO  | Verification  | Last name verified. Your last name is: xxx                                                                                                                                                                                                                                                                     | N/A                        |
+| Record INFO  | Basic Inquiry | What's your net ID? Please spell it out.                                                                                                                                                                                                                                                                       | Net ID (eg. y-l-2-5-5-7)   |
+| Record INFO  | Verification  | Net ID verified. Your net ID is: xxx                                                                                                                                                                                                                                                                           | N/A                        |
+| Scan barcode | Guide         | Please pick up one testing kit on your right side.                                                                                                                                                                                                                                                             | N/A                        |
+| Scan barcode | Guide         | Please use the camera in front of you to take a picture of your barcode on the test tube. When you are ready, please press the red button.                                                                                                                                                                     | Press red button           |
+| Scan barcode | Verification  | TAKE PHOTO NOW!!!                                                                                                                                                                                                                                                                                              | N/A                        |
+| Scan barcode | Verification  | Your unique barcode has been successfully recorded.                                                                                                                                                                                                                                                            | N/A                        |
+| Testing      | Guide         | Now, follow the guidance displayed on the screen. If you need assistance, please press the red button, staff will come to you shortly. If you finished testing, place the tube in the bucket on your left side. Thanks for caring the Cornell Tech community by participating the weekly surveillance testing. | N/A or Press Red Button    |
+| Testing      | Guide         | A staff will come to you shortly. Please wait patiently. If our staff haven't reached you in 2 mins, please press the button again.                                                                                                                                                                            | N/A or Press Red Button    |
 ## Prototype your system
 
 The system should:
@@ -171,6 +207,17 @@ The system should:
 *Document how the system works*
 
 *Include videos or screencaptures of both the system and the controller.*
+### Final Video of Prototyping
+[Final Video of Prototyping](https://youtu.be/rWOsRPjlX2g)
+
+### Screencaptures
+* Screen Display: 
+![Screenshot](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-screen1.jpg)
+![Screenshot](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-screen2.jpg)
+![Screenshot](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-screen3.jpg)
+![Screenshot](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-screen4.jpg)
+* Sample photo of barcode scanning: 
+![Screenshot](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%203/lab3-barcode.jpg)
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
