@@ -199,6 +199,8 @@ This doorbell camera shall be attached on the door with stickers. It would start
 * How shall we position the sensor such that it's at the right angle to detect the distance we aim to extract?
   * For the "Eye-caring Clipboard" case, we need to choose the right angle to detect the distance between users' eyes and the paper on the clipboard. If we placed the sensor entirely facing the ceiling (90°), it would be hard to capture any human object and detect the distance. If we placed the sensor entirely facing the users (0°), the sensor would detect the distance between the users' bodies and the paper on the clipboard, which is not our target distance and might result in a false alert due to miscalculation. 50° to 30° would be a reasonable range but we still need to physically prototype the position of the sensor to understand the best angle.
   * For the "Parking Assistant" case, if the sensor was placed vertically, it could detect any obstacle that rise above the ground with a height greater or equal that the height of the sensor above the ground but miss those with a height above the ground less than that of the sensor. We still need to physically prototype the position of the sensor to understand the best angle. Or we can use the camerca to detect obstacles and adjust the angle dynamically. 
+* How shall we design the appearance of our device such that we can fit in the Raspberry pi in a way that does affect the aesthetics of our device? 
+  * In response to this, we still need to physically prototype the appearance of our device.
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
