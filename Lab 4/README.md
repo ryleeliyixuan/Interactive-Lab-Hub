@@ -174,7 +174,26 @@ You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_VL53L
 Usually, sensors need to positioned in specific locations or orientations to make them useful for their application. Now that you've tried a bunch of the sensors, pick one that you would like to use, and an application where you use the output of that sensor for an interaction. For example, you can use a distance sensor to measure someone's height if you position it overhead and get them to stand under it.
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
+#### Eye-caring Clipboard
+The eye-caring clipboard prevents vision impairment & blurred eyesight by alerting users with sounds if they write/read in a wrong posture that place their heads too close to the book (<30cm).
+![eye-caring-clipboard-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/c-eye-caring-clipboard-1.jpg)
+![eye-caring-clipboard-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/c-eye-caring-clipboard-2.jpg)
 
+#### Parking Assistant
+This rear parking assistant device detects the distance between the car and any obstacle behind and alert users about the distance.
+![parking-assistant](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/c-parking.jpg)
+
+#### Social Distance Detector
+This social distance detector detects the distance between users and any human objects and alerts with sounds whenever users violate social distance rule (< 6 feet). Its camera connects to the car system so that the rear view would show up in the dashboard of the control system. 
+![social-distance](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/c-social-distance.jpg)
+
+#### Water-Level Logger
+This water-level logger features a distance detector at the bottom of the box and an ajustable supporter that helps the device stand stably in the river. It detects the distance between itself and the water surface. The raspberry Pi would log the water level on hourly basis and send back logs to the server on the shared Wi-fi network on daily basis. 
+![water-level logger](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/c-water-level-logger.jpg)
+
+#### Doorbell Camera
+This doorbell camera shall be attached on the door with stickers. It would start to record when moving objects enters the sight (<3m).
+![doorbell-camera](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/c-doorbell-camera.jpg)
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
