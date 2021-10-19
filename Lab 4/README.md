@@ -246,6 +246,7 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+![physical-display](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/d-physical-display.jpg)
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
