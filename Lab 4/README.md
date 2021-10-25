@@ -245,13 +245,23 @@ Here is an example:
 Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
-
+This device needs to integrate a text display and a distance sensor. The main focus of our design is the position of the display and sensor. Following is the list of designs I am considering.  
 ![physical-display](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/d-physical-display.jpg)
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+* Do we need to crop a hole on the clipboard to fit in the sensor and display? We need to physically prototype the placement of the display and the sensor to understand this.
+* How to make the angle/direction of the sensor adjustable? Do we need a handle/knob to control the angel of the distance sensor? (Is it possible to realize the calculation for different angles using some sort of algorithm so that we don't have to adjust the angle to a fixed value?)
+* What would be the depth of the clipboard in order to fit the Raspberry pi underneath it? We need to measure the depth of the Raspberry Pi to figure out the problem. 
+* Would the placement of sensor affect users' writing/reading experience? Need to find the right position of the sensor on the clipboard such that if users place paper/notepad on it, paper/notepad would not cover the sensor.
+
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I decided to go with design no.5. 
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+* In order to fit in the text display and the distance sensor, the size of clipboard (230mm x 295mm) is a litte bit larger than letter-size (215.9mm x 279.4mm).
+* I hide the Raspberry pi beneath the board such that it does not affect the aesthetics of our device.
+* I choose to place the display and sensor on the very top of the clipboard such that paper/notepad would not cover them. Also in this way, users can track the distance while writing/reading.
 
 Build a cardbord prototype of your design.
 
@@ -263,6 +273,9 @@ LAB PART 2
 ### Part 2
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
+
+Feedback: 
+Yixuan! I thought the posture correction idea is great. Interesting too to see how you wanted to connect it to a clipboard. I was thinking though, it would be useful for someone like me too who always sits in front of her computer. I think it would be interesting to design the posture corrector as a clip that you can attach to anything you are looking at. Or even as a necklace, with the sensor aligned upright facing the back of your neck. That way if the distance exceeds x, that means the person is slouching. Overall think the idea is interesting but the form factor I think has so much potential! - Angelica Kosasih
 
 ### Part E (Optional)
 ### Servo Control with Joystick
