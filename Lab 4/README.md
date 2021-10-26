@@ -330,8 +330,8 @@ I fixed this problem by creating a slope of about 60 degree and making the dista
 
 ### Iteration 2:
 I tested out the device with a few of my friends. And I decided to iterate the product from following perspectives:
-* Alert: alert users when their eyes are getting too close to the interface (ie. laptop,notebooks / depends on the working environment) with sounds and lights. Originally, I only took sounds into accounts. But considering those with hearing loss, I added lights to the list. 
-* Lightness: this device aims to protect users' eyesight by detecting their gesture. I wanted to take one step forward by detecting the lightness of the working environment using the color sensor. If it's too dark in the room, the device would also make alerts.
+* __Alert:__ alert users when their eyes are getting too close to the interface (ie. laptop,notebooks / depends on the working environment) with sounds and lights. Originally, I only took sounds into accounts. But considering those with hearing loss, I added lights to the list. 
+* __Lightness:__ this device aims to protect users' eyesight by detecting their gesture. I wanted to take one step forward by detecting the lightness of the working environment using the color sensor. If it's too dark in the room, the device would also make alerts.
 
 #### Design - Iteration 2
 
@@ -340,9 +340,26 @@ The design can be found in the following picture. Sensors are placed on the slop
 ![f-iteration-2-design](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-design.jpg)
 
 #### Looks like - Iteration 2
+This device is a box (width of 8cm, length of 10cm and height of 7cm) featuring an adjustable slant.
+
+![f-iteration-2-look](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-look.jpeg)
+
+[The video here gives a full view of the device.](https://youtu.be/utOM4yWnCvs)
 
 #### Works like - Iteration 2
+This device is able to:
+* __Detect distance:__ detect distance between the user' head and the device itself
+* __Detect lightness:__ detect the lightness in the environment
+* __Display Information:__ display the distance & lightness
+
+![f-iteration-2-act-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-act-2.jpg)
+
+* __Make Alerts:__ make alerts with sounds and lights if the distance is less than 1 feet & if the lightness is less than 100
+
+![f-iteration-2-act-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-act-1.jpg)
+![f-iteration-2-act-3](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-act-3.jpg)
 
 #### Acts like - Iteration 2
 
+The final video can be found here ()
 
