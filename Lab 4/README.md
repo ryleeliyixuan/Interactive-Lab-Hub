@@ -245,8 +245,10 @@ Here is an example:
 Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
+
 This device needs to integrate a text display and a distance sensor. The main focus of our design is the position of the display and sensor. Following is the list of designs I am considering.  
 ![physical-display](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/d-physical-display.jpg)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 * Do we need to crop a hole on the clipboard to fit in the sensor and display? We need to physically prototype the placement of the display and the sensor to understand this.
 * How to make the angle/direction of the sensor adjustable? Do we need a handle/knob to control the angel of the distance sensor? (Is it possible to realize the calculation for different angles using some sort of algorithm so that we don't have to adjust the angle to a fixed value?)
@@ -261,12 +263,20 @@ I decided to go with design no.5.
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 * In order to fit in the text display and the distance sensor, the size of clipboard (230mm x 295mm) is a litte bit larger than letter-size (215.9mm x 279.4mm).
 * I hide the Raspberry pi beneath the board such that it does not affect the aesthetics of our device.
-* I choose to place the display and sensor on the very top of the clipboard such that paper/notepad would not cover them. Also in this way, users can track the distance while writing/reading.
+* I choose to place the display and sensor on the very top of the clipboard such that paper/notepad would not cover them. Also in this way, users can track the distance with the text display while writing/reading.
 
 Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+* Front: this left corner is the distance sensor and the right corner is the text display. 
+![d-cardboard-front](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/d-cardboard-front.jpeg)
+
+* Back: 
+![d-cardboard-back](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/d-cardboard-back.jpeg)
+
+* Video of My Cardboard Prototype: 
+*[Video of My Cardboard Prototype](https://youtu.be/jt__6ufoJOM )*
 
 LAB PART 2
 
