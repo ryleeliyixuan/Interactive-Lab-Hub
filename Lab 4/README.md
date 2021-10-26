@@ -367,3 +367,5 @@ This device is able to:
 
 [And code can be found here.](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/eyecaring/main.py)
 
+Thanks Jason, Angelica and Xuanyu for giving me valuable feedbacks!
+
