@@ -290,18 +290,59 @@ Yixuan! I thought the posture correction idea is great. Interesting too to see h
 
 ### Iteration 1: 
 Thanks for Angelica's feedback! I decided to take her advice. I destilled the idea of "eye-caring clipboard" to make the device working for multiple scenarios. Not only for writing & reading with clipboard, also for all kinds of working environments (laptops, tablets, paper and etc). I thought about three possible designs, two of which are wearables: 
+
 ![f-gesture-corrector](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-gesture-corrector.jpg)
 I picked the non-wearable design because of the following reasons:
 * The necklace may be too heavy for users as we need to integrate our Raspberry Pi into the device.
 * The watch moves along with hand movement (writing, typing and clicking). We are aiming to detect the distance from the head to the interface. If we implements the device in form of watch, the distance detected is not our target distance. 
 * The stand-alone idea is the best option as we can place the device wherever we want. We can detect the target distance as long as we make the distance sensor facing direct to the user's head.
 
-This is the design for iteration 1:
-![f-iteration-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-1.jpg)
-### Record
+#### Design - Iteration 1
 
-Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
-* "Looks like": shows how the device should look, feel, sit, weigh, etc.
-* "Works like": shows what the device can do
-* "Acts like": shows how a person would interact with the device
+![f-iteration-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-1.jpg)
+
+#### Looks like - Iteration 1
+
+[A video of the prototype for iteration 1 can be found here. - Looks like](https://youtu.be/t6qTmJUoAZU)
+
+#### Works like - Iteration 1
+
+It can display the distance between user and itself.
+
+![f-iteration-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration1-prototype.jpeg)
+
+#### Acts like - Iteration 1
+
+I invited Jason to test out the device. He didn't want to feature in the video so I replay the scenario by myself again. Basically, the process went smoothly as the device successfully detected the distance between his eyes and itself.
+
+[A video of the prototype for iteration 1 can be found here. - Acts like](https://youtu.be/ART-KJF9_FM)
+
+There was one major problem about this device:
+* If we placed any item between the user and the device (eg. keyboard, notebook...), the device would detect the distance between the item and itself due to the direction that the distance sensor was facing (90 degree). So we need to adjust the angle of the sensor to make the sensor directly face to the user.
+
+[The problem listed above was illustrated in this video.](https://youtu.be/itkBRCbX4Wc)
+
+I fixed this problem by creating a slope of about 60 degree and making the distance sensor directly facing the user's eyes. 
+
+![f-iteration-1-fix](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-1-fix.jpeg)
+
+[This video demonstrated how I solved this probem.](https://youtu.be/nyOGMrRFW1Q)
+
+### Iteration 2:
+I tested out the device with a few of my friends. And I decided to iterate the product from following perspectives:
+* Alert: alert users when their eyes are getting too close to the interface (ie. laptop,notebooks / depends on the working environment) with sounds and lights. Originally, I only took sounds into accounts. But considering those with hearing loss, I added lights to the list. 
+* Lightness: this device aims to protect users' eyesight by detecting their gesture. I wanted to take one step forward by detecting the lightness of the working environment using the color sensor. If it's too dark in the room, the device would also make alerts.
+
+#### Design - Iteration 2
+
+The design can be found in the following picture. Sensors are placed on the slope side by side, and alertors are placed below the sensors.
+
+![f-iteration-2-design](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-design.jpg)
+
+#### Looks like - Iteration 2
+
+#### Works like - Iteration 2
+
+#### Acts like - Iteration 2
+
 
