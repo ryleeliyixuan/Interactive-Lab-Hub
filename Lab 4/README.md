@@ -280,43 +280,24 @@ Build a cardbord prototype of your design.
 
 LAB PART 2
 
-### Part 2
+## Part 2
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
 
-Feedback: 
+### Part F
+### Feedback: 
 Yixuan! I thought the posture correction idea is great. Interesting too to see how you wanted to connect it to a clipboard. I was thinking though, it would be useful for someone like me too who always sits in front of her computer. I think it would be interesting to design the posture corrector as a clip that you can attach to anything you are looking at. Or even as a necklace, with the sensor aligned upright facing the back of your neck. That way if the distance exceeds x, that means the person is slouching. Overall think the idea is interesting but the form factor I think has so much potential! - Angelica Kosasih
 
-### Part E (Optional)
-### Servo Control with Joystick
+### Iteration 1: 
+Thanks for Angelica's feedback! I decided to take her advice. I destilled the idea of "eye-caring clipboard" to make the device working for multiple scenarios. Not only for writing & reading with clipboard, also for all kinds of working environments (laptops, tablets, paper and etc). I thought about three possible designs, two of which are wearables: 
+![f-gesture-corrector](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-gesture-corrector.jpg)
+I picked the non-wearable design because of the following reasons:
+* The necklace may be too heavy for users as we need to integrate our Raspberry Pi into the device.
+* The watch moves along with hand movement (writing, typing and clicking). We are aiming to detect the distance from the head to the interface. If we implements the device in form of watch, the distance detected is not our target distance. 
+* The stand-alone idea is the best option as we can place the device wherever we want. We can detect the target distance as long as we make the distance sensor facing direct to the user's head.
 
-In the class kit, you should be able to find the [Qwiic Servo Controller](https://www.sparkfun.com/products/16773) and [Micro Servo Motor SG51](https://www.adafruit.com/product/2201). The Qwiic Servo Controller will need external power supply to drive, which we will be distributing the battery packs in the class. Connect the servo controller to the miniPiTFT through qwiic connector and connect the external battery to the 2-Pin JST port (ower port) on the servo controller. Connect your servo to channel 2 on the controller, make sure the brown is connected to GND and orange is connected to PWM.
-
-<img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.15752-9/245605956_303690921194525_3309212261588023460_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_ohc=FvFLlClTKuUAX9nJ3LR&_nc_ht=scontent-lga3-1.xx&oh=b7ec1abc8d458b6c1b7a00a6f11398ac&oe=618D7D96" width="400"/>
-
-In this exercise, we will be using the nice [ServoKit library](https://learn.adafruit.com/16-channel-pwm-servo-driver/python-circuitpython) developed by Adafruit! We will continue to use the `circuitpython` virtual environment we created. Activate the virtual environment and make sure to install the latest required libraries by running:
-
-```
-(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ pip3 install -r requirements.txt
-```
-
-A servo motor is a rotary actuator or linear actuator that allows for precise control of angular or linear position. The position of a servo motor is set by the width of an electrical pulse, that is, we can use PWM (pulse-width modulation) to set and control the servo motor position. You can read [this](https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors/servo-motors) to learn a bit more about how exactly a servo motor works.
-
-Now that you have a basic idea of what a servo motor is, look into the script `qwiic_servo_example.py` we provide. In line 14, you should see that we have set up the min_pulse and max_pulse corresponding to the servo turning 0 - 180 degree. Try running the servo example code now and see what happens:
-
-```
-(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python servo_test.py
-```
-
-It is also possible to control the servo using the sensors mentioned in as in part A and part B, and/or from some of the buttons or parts included in your kit, the simplest way might be to chain Qwiic buttons to the other end of the Qwiic OLED. Like this:
-
-<p align="center"> <img src="chaining.png"  width="200" ></p>
-
-You can then call whichever control you like rather than setting a fixed value for the servo. For more information on controlling Qwiic devices, Sparkfun has several python examples, such as [this](https://learn.sparkfun.com/tutorials/qwiic-joystick-hookup-guide/all#python-examples).
-
-We encourage you to try using these controls, **while** paying particular attention to how the interaction changes depending on the position of the controls. For example, if you have your servo rotating a screen (or a piece of cardboard) from one position to another, what changes about the interaction if the control is on the same side of the screen, or the opposite side of the screen? Trying and retrying different configurations generally helps reveal what a design choice changes about the interaction -- _make sure to document what you tried_!
-
-### Part F
+This is the design for iteration 1:
+![f-iteration-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-1.jpg)
 ### Record
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
