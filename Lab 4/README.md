@@ -326,7 +326,9 @@ I fixed this problem by creating a slope of about 60 degree and making the dista
 
 ![f-iteration-1-fix](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-1-fix.jpeg)
 
-[This video demonstrated how I solved this probem.](https://youtu.be/nyOGMrRFW1Q)
+[This video demonstrated how I solved this probem.](https://youtu.be/nyOGMrRFW1Q) 
+
+[And code for iteration 1 can be found here.](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/eyecaring/mainv1.py).
 
 ### Iteration 2:
 I tested out the device with a few of my friends. And I decided to iterate the product from following perspectives:
@@ -354,12 +356,14 @@ This device is able to:
 
 ![f-iteration-2-act-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-act-2.jpg)
 
-* __Make Alerts:__ make alerts with sounds and lights if the distance is less than 1 feet & if the lightness is less than 100
+* __Make Alerts:__ make alerts with sounds and lights if the distance is less than 1.2 feet & if the lightness is less than 100
 
 ![f-iteration-2-act-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-act-1.jpg)
 ![f-iteration-2-act-3](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/f-iteration-2-act-3.jpg)
 
 #### Acts like - Iteration 2
 
-The final video can be found here ()
+[The final video can be found here.](https://youtu.be/uszHRevglsI)
+
+[And code can be found here.](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%204/eyecaring/main.py)
 
