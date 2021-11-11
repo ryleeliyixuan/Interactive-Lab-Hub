@@ -1,0 +1,4 @@
+0 Triangle- Cracked - Fail
+1 Circle - Win
+2 Circle - Cracked - Fail
+3 Triangle - Win
