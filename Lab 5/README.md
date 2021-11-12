@@ -238,13 +238,6 @@ We came up with 2 ideas, pitch them to potential users, and chose the second one
   * __Background:__ The challenge sees players trying to carve a design or shape – such as a circle, triangle or umbrella into a piece of honeycomb candy known as dalgona, a popular Korean street food treat. Winners get to progress onto the next challenge in a series of childhood games. However, anyone who cracks the candy, even slightly, gets shot dead by the soldiers.
   * __Interaction:__ We use the teachable machine developed by Google to identify if the candy is cracked or not. We’ll place the detector (ie. camera) over the participants. When the race starts, our observant system will keep track of the shape of the candy to detect if the candy is cracked or not. If the candy is cracked or the time runs out and the participants haven’t carved out the dalgona, our Raspberry Pi will sound alert that they are eliminated from the game. And winners will be notified that they can proceed to the next round. 
 ![b-interaction](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/b-interaction.jpg)
-  * __Prototype Version 1:__ We only trained one shape (ie. circle) of candy for this version. We will later iterate our prototype based on the test we implement with potential users. [Video of implementation can be found here.](https://youtu.be/3UqkNbG3vNg)
-  * __Possible iteration and refinement:__ 
-    * 1. We can train our model for multiple shapes (ie. triangle, circle, star, and umbrella).
-    * 2. We can have a count down on the Raspberry Pi. 
-    * 3. We can voice alert to notify the result of the game. 
-    * 4. We can identify the face of the participants to rule out the loser from our system.
-    * 5. … 
 
 
 
@@ -252,18 +245,43 @@ We came up with 2 ideas, pitch them to potential users, and chose the second one
 ### Part C
 ### Test the interaction prototype
 
+* __Prototype Version 1:__ 
+  * We only trained one shape (ie. circle) of candy for this version. We will later iterate our prototype based on the flight test we implement with potential users. [Video of the tensorflow model can be found here.](https://youtu.be/3UqkNbG3vNg)
+  * Our Model: ![c-classification](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/c-classification.png)
+* __Possible iteration and refinement:__ 
+  * 1. We can train our model for multiple shapes (ie. triangle, circle, star, and umbrella).
+  * 2. We can have a count down on the Raspberry Pi. 
+  * 3. We can voice alert to notify the result of the game. 
+  * 4. We can identify the face of the participants to rule out the loser from our system.
+  * 5. … 
+
+
 Now flight test your interactive prototype and **note down your observations**:
-For example:
-1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+We flight test our prototype on Raspberry Pi and had following observations:
+* __Goal:__ 
+  * The system is supposed to detect if the candy is cracked or not.
+* __Failure / Scenarios / Reasons Behind:__
+  * The system works smoothly when the candies are placed on a table with simple color and shape. But when we switch to the background with messy shapes and colors it fails a lot. 
+  * Stability is also a crucial factor that decides whether the system can detect the candy status. When the camera is not stabilized, it takes longer to detect the objects and would fail to do so sometimes. With multiple tests, we found that using the camera from different angles and heights led to different results. 
+  * Also, the lighting in the room can influence if the system can successfully report the result. 
+  * Another reason for failure is that the object border is not clear enough. Besides the shapes of the candy itself, the contrast between the candy and the surrounding would affect whether it can be detected correctly. 
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
 1. How bad would they be impacted by a miss classification?
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+* __Are they aware of the uncertainties in the system?__
+  * Users might not be fully aware of the uncertainties in the system unless specifically marked. Users will not be able to test the angle and height of the camera, they also will not pay much attention to the background and the room lights when playing this game. 
+* __How bad would they be impacted by a miss classification?__
+  * From the original game setting, those who lose the game will be shot. If there are a huge number of misclassifications, many innocent users will be killed. 
+  * Back to our own setting(we won’t kill people), users will not get to know if they are doing well or not but keep receiving the wrong message from the system. 
+* __How could change your interactive system to address this?__
+  * We should train our model again with more winning and bad examples. 
+* __Are there optimizations you can try to do on your sense-making algorithm.__
+  * One concern is to differentiate between candy on the table and the table itself. If the system regards the table as a big candy placed onto the table, even if it is not cracked, the first time the user uses the scissor to cut off the shape the system will regard it as a failure. 
+
 
 ### Part D
 ### Characterize your own Observant system
@@ -279,9 +297,25 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+* What can you use X for?
+  * We can use the observant system to detect cracked shapes. It can be used in this game from our initial setting. On a larger scale, it can also be used to detect if the floor is messy, if the shirt is dirty and if the painting is in the right place of the wall, all of them can be treated as a kind of cracked shape if we capture the out of range tracks or shapes. 
+* What is a good environment for X?
+  * A good environment would have good lighting which can present each candy clearly in the camera, and there should be enough contrast between each candy as well as the background.
+* What is a bad environment for X?
+  * A bad environment might be places without much lighting. This might cause the system to fail in detecting certain shapes from the background. Other factors like the colors and sizes of the candy can also influence the result. If the candy is too small with a broad background, the system will fail with no doubt. Places, where the colors are similar to the candies, are also a bad environment. 
+* When will X break? When it breaks how will X break?
+  * It will break when there is too much motion of the camera because the delay is quite bad. The low accuracy of the model will lead to the failure of the system.
+* What are other properties/behaviors of X? How does X feel?
+  * The system will display the result on the screen. If the user wins the game, it will say that you win this round with the same words on the screen. If the user fails, it will read out the warning to remind the user of losing the game. 
+
 
 ### Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
+
+#### Prototype - Iteration 2
+* In part 2 of our lab, we train our model for two shapes of two states. Our system is to determine whether the candy is cracked or not. Circles and triangles are the chosen shapes, and they have the states of cracked(F), not cracked(T). So there are four labels in our model. 
+* In this part, we wish to improve our system by adding both voice, words, and lighting feedback. All of these feedbacks are designed to enhance convenience and promote user accessibility. When the system detects a crack on the candy, there will be a ‘You Fail’ message displayed on the screen with the same voice message coming out. A red light will flash in this case to represent a strong warning of failure. In another case, if the user wins the game, the system will say “You win this round” with the same message displayed on the screen. With these add-on functions, the users will not need to stare at a screen to figure out if they are doing well. Users with disabilities can also use the system easily with the assistance of voice.
+* For future steps, we may want our system to interact with the users. A simple example would be a user saying “restart the game”, the system will restart immediately.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
