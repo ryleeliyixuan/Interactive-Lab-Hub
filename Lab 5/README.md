@@ -98,8 +98,30 @@ pi@ixe00:~$ cd ~/openCV-examples/object-detection
 pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 ```
 
-**\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
+**\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm. [Ruoyu Zhou] \*\*\***
+* __Contours__
+  * __Design - Replacement of Background__: It’s easy for a contours algorithm to detect object borders and localize objects in an image. We can use it to replace the background of an image with another, all we need is to perform image-foreground extraction (similar to image segmentation). Contours is an approach that can be used to perform such segmentation.
+  * __ScreenShot__: 
 
+![a-opencv-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-opencv-1.png)
+
+* __Face-detection__
+  * __Design - Hair Line Calculator__: The face-detection algorithm can detect inner features(mouth, nose, eyes) and also outer features(head shape, hairlines). We can use it as a Hair Line Calculator, which can be used to calculate the estimated time it will take to be bald based on the position movement of people’s hairline.
+  * __ScreenShot__: 
+
+![a-opencv-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-opencv-2.png)
+
+* __Optical-flow__
+  * __Design - Toy car racing tracker__: The optical-flow detects the motion of objects or the webcams. We can use it to build a toy car racing tracker. If the toy car runs out of the original line it loses the game. We can see from the picture when it gets across the middle line.
+  * __ScreenShot__: 
+
+![a-opencv-3](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-opencv-3.png)
+
+* __Object-detection__
+  * __Design - Room copy app__: The object-detection algorithm can locate objects. We can use it to build a room copy app. When someone finds that the furniture and decorations in a vlog are attractive and they want to copy those decorations, they can use what we have designed to copy the room and get a list of items and their positions.
+  * __ScreenShot__: 
+
+![a-opencv-4](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-opencv-4.png)
 #### MediaPipe
 
 A more recent open source and efficient method of extracting information from video streams comes out of Google's [MediaPipe](https://mediapipe.dev/), which offers state of the art face, face mesh, hand pose, and body pose detection.
