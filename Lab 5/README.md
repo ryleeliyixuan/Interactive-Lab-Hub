@@ -297,15 +297,15 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
-* What can you use X for?
+* __What can you use X for?__
   * We can use the observant system to detect cracked shapes. It can be used in this game from our initial setting. On a larger scale, it can also be used to detect if the floor is messy, if the shirt is dirty and if the painting is in the right place of the wall, all of them can be treated as a kind of cracked shape if we capture the out of range tracks or shapes. 
-* What is a good environment for X?
+* __What is a good environment for X?__
   * A good environment would have good lighting which can present each candy clearly in the camera, and there should be enough contrast between each candy as well as the background.
-* What is a bad environment for X?
+* __What is a bad environment for X?__
   * A bad environment might be places without much lighting. This might cause the system to fail in detecting certain shapes from the background. Other factors like the colors and sizes of the candy can also influence the result. If the candy is too small with a broad background, the system will fail with no doubt. Places, where the colors are similar to the candies, are also a bad environment. 
-* When will X break? When it breaks how will X break?
+* __When will X break? When it breaks how will X break?__
   * It will break when there is too much motion of the camera because the delay is quite bad. The low accuracy of the model will lead to the failure of the system.
-* What are other properties/behaviors of X? How does X feel?
+* __What are other properties/behaviors of X? How does X feel?__
   * The system will display the result on the screen. If the user wins the game, it will say that you win this round with the same words on the screen. If the user fails, it will read out the warning to remind the user of losing the game. 
 
 
