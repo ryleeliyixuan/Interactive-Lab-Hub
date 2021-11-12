@@ -156,9 +156,14 @@ Each of the installs will take a while, please be patient. After successfully in
 
 Try the two main features of this script: 1) pinching for percentage control, and 2) "[Quiet Coyote](https://www.youtube.com/watch?v=qsKlNVpY7zg)" for instant percentage setting. Notice how this example uses hardcoded positions and relates those positions with a desired set of events, in `hand_pose.py` lines 48-53. 
 
-**\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
+**\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.[Jingchun Huang]\*\*\***
 
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
+
+* __Gesture Recognition__
+  * __About this Tool__: MediaPipe is used to detect the percentage of the pinching of hands. In the screen of this script, it shows the skeleton of hands and the percentage of how much the hand is pinched. So when you open the palm, it will reach 0%, vice versa. 
+  * __Video of Playing with this Tool__: [here](https://youtu.be/Jp6AUvShyy0)
+  * __Design - Pinch Instruction for Climbing__: In climbing, pinch is quite an important skill for climbers to hold those shallow hand points. Fingers are used and it can be tiring. When you take a high-level climbing track, like 5.11 or above, this skill can be used very frequently. So we can create a pinching instruction box for climbers. It can tell them how well they use this skill. Also, there can be a pattern for the pinch percentage and the difficulty level of the climbing track. For instance, level 5.11 needs 65% pinch, and level 5.6 only needs 30% pinch.
 
 
 
@@ -192,24 +197,24 @@ This might take a while to get fully installed. After installation, connect your
 
 (**Optionally**: You can train your own model, too. First, visit [TeachableMachines](https://teachablemachine.withgoogle.com/train), select Image Project and Standard model. Second, use the webcam on your computer to train a model. For each class try to have over 50 samples, and consider adding a background class where you have nothing in view so the model is trained to know that this is the background. Then create classes based on what you want the model to classify. Lastly, preview and iterate, or export your model as a 'Tensorflow' model, and select 'Keras'. You will find an '.h5' file and a 'labels.txt' file. These are included in this labs 'teachable_machines' folder, to make the PPE model you used earlier. You can make your own folder or replace these to make your own classifier.)
 
-**\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
-
-
+**\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options. [Yixuan Rylee Li]\*\*\***
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
+* __Whether we make our own model or not:__ We made our own model to detect whether the user is wearing a mask or not. 
+* __How we might use this to create your own classifier:__ We use Teachable Machines to create a classifier that could classify frames to the following three classes: 1) With Mask Class: users with a face mask on 2) Without Mask Class: users without a face mask on 3) Background Class: have nothing in view. 
+* __Video of the Implementation can be found here:__ [here](https://youtu.be/pIRBphQYEcQ)
+* __Screenshots can be found here__: 
+  * Without Mask Class: ![a-tm-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-tm-1.png)
+  * With Mask Class:
+![a-tm-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-tm-2.png)
+![a-tm-3](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-tm-3.png)
+  * Background class:
+![a-tm-4](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/a-tm-4.png)
 
-#### Filtering, FFTs, and Time Series data. (optional)
-Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU data stream could create a simple activity classifier between walking, running, and standing.
+* __Tensorflow file of this model can be found here:__ [here](https://drive.google.com/drive/folders/1_L4p6qSrlTtcsG7IY8zK2dcVkNk3blhh?usp=sharing)
+* __Include what different affordances this method brings, compared to the OpenCV or MediaPipe options:__
+Compared to the OpenCV or MediaPipe options, Teachable Machines allow us to train our own device to create machine learning models and recognize our own images, sounds, & poses. We can gather and group our examples into classes that we want the computer to learn. And Teachable Machine is very flexible since we can capture examples live. We can even export our model for different projects (ie. sites, apps, and etc). 
 
-Using the accelerometer, try the following:
-
-**1. Set up threshold detection** Can you identify when a signal goes above certain fixed values?
-
-**2. Set up averaging** Can you average your signal in N-sample blocks? N-sample running average?
-
-**3. Set up peak detection** Can you identify when your signal reaches a peak and then goes down?
-
-**\*\*\*Include links to your code here, and put the code for these in your repo--they will come in handy later.\*\*\***
 
 
 ### Part B
@@ -220,6 +225,29 @@ This can be as simple as the boat detector earlier.
 Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
+We came up with 2 ideas, pitch them to potential users, and chose the second one (ie. Squid Game Candy Chanllenge).
+* __Ruoyu’s idea for Teachable Machine:__
+  *  __Interaction:__ Measuring the connection between art visitors and pieces of art or relics in a museum is the core step. The goal is to quantify the time a user spends looking at a piece of art or relics, and compare to extract potential patterns. We can simplify the problem by calculating the time each user spends looking at different pieces of art. 
+  *  __Method:__ We should find individual patterns and identify what type of art or cultural relics the user is more engaged with. Ideally, this could be done by measuring the eye gaze or even biometrics data, such as heart rate or skin conductivity. A good environment for it is a controllable environment taking into account the limitations of the Pi camera(privacy issues).
+  *  __Algorithm:__ The algorithm can classify 3 classes: (1) Looking at Left(it can be an ancient Egyptian clay bowl), (2) Looking at Right(it can be an ancient China painting), or (3) Looking at nothing. In the cases where the class is none of them, the algorithm still needs to make the most probable guess.
+  * __Problem:__ But the problem is if we put it into an exhibition, the model should be trained for every different face.
+
+* __Yixuan Rylee Li’s idea for Teachable Machine(Chosen one)__
+  * __Idea:__ Squid Game Dalgona Candy Challenge
+![b-dalgona-candy-game-social](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/b-dalgona-candy-game-social.jpeg)
+  * __Background:__ The challenge sees players trying to carve a design or shape – such as a circle, triangle or umbrella into a piece of honeycomb candy known as dalgona, a popular Korean street food treat. Winners get to progress onto the next challenge in a series of childhood games. However, anyone who cracks the candy, even slightly, gets shot dead by the soldiers.
+  * __Interaction:__ We use the teachable machine developed by Google to identify if the candy is cracked or not. We’ll place the detector (ie. camera) over the participants. When the race starts, our observant system will keep track of the shape of the candy to detect if the candy is cracked or not. If the candy is cracked or the time runs out and the participants haven’t carved out the dalgona, our Raspberry Pi will sound alert that they are eliminated from the game. And winners will be notified that they can proceed to the next round. 
+![b-interaction](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/b-interaction.jpg)
+  * __Prototype Version 1:__ We only trained one shape (ie. circle) of candy for this version. We will later iterate our prototype based on the test we implement with potential users. [Video of implementation can be found here.](https://youtu.be/3UqkNbG3vNg)
+  * __Possible iteration and refinement:__ 
+    * 1. We can train our model for multiple shapes (ie. triangle, circle, star, and umbrella).
+    * 2. We can have a count down on the Raspberry Pi. 
+    * 3. We can voice alert to notify the result of the game. 
+    * 4. We can identify the face of the participants to rule out the loser from our system.
+    * 5. … 
+
+
+
 
 ### Part C
 ### Test the interaction prototype
