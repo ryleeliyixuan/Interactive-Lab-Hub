@@ -1,4 +1,4 @@
-# Observant Systems
+# Observant Systems - Yixuan Rylee Li (yl2557), Ruoyu Zhou(rz224), Jingchun Huang(jh2688)
 
 
 For lab this week, we focus on creating interactive systems that can detect and respond to events or stimuli in the environment of the Pi, like the Boat Detector we mentioned in lecture. 
@@ -340,4 +340,13 @@ We realized that the stability of our camera matters a lot in our scenario. So w
 ![our-design](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/3671636971577_.pic_hd.jpg)
 
 * [Our final video of implementation can be found here!](https://youtu.be/4M58SZ_zECc) In this video, the device detects three states of the candy and the background. It gives the participant notices with texts and sounds. It also consider the participant's hand movement while working on the candy.
+* Starting code: [tm.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/tm.py)
+* Model:
+  * Iteration 1: [code-model-v1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/tree/Fall2021/Lab%205/converted_keras_v1)
+  * Iteration 2: [code-model-v2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/tree/Fall2021/Lab%205/converted_keras_v2)
+  * Iteration 3: [code-model-v3](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/tree/Fall2021/Lab%205/converted_keras_v3)
 
+
+## Contribution
+* Team Member: Yixuan Rylee Li (yl2557), Ruoyu Zhou(rz224), Jingchun Huang(jh2688)
+* Thanks to Claus Chiang and Gauel Tian for feedbacks!
