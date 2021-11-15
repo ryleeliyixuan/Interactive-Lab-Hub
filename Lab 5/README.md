@@ -318,9 +318,12 @@ Following exploration and reflection from Part 1, finish building your interacti
 * __Train our model for two shapes of two states:__ Our system is to determine whether the candy is cracked or not. Circles and triangles are the chosen shapes, and they have the states of cracked(F), not cracked(T). So there are four labels in our model. 
   * [This system detects a triangular candy that has been successfully carved out (Win). Video can be found here.](https://youtu.be/jubUEWHmhjU)
 * __Further train our model for different environment:__ From the pilot test we ran with potential users in part 1, we figured out that we should further improve our model. And we made improvements in following aspects to avoid errors in different environments:
-  * 1. Add a background class
-  * 2. Add more class and train the model with 200+ images: so the model can works for more settings/environments (ie. lighting, distance between the candy and the device, background color).
-  * 3. Consider the case that the participant's hands cover the candy: from our pilot test, we found that the participant tended to cover some portion of the candy with his hands while working on the candy. We don't want to misclassify this instance as fail. We add more image samples on this case to avoid misclassification.  
+  * Add a background class
+  * Add more class: During our recent tests, we found 2 states (ie. cracked(F) and not cracked(T)) were not enough for our scenario. We further extended them into 3 states (ie. cracked(F), carved out(T), and still working on the candy(W)). Further explanations can be found in the following pic:
+
+![2-states](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/2-states.jpg)
+  * Train the model with 200+ images: so the model can works for more settings/environments (ie. lighting, distance between the candy and the device, background color).
+  * Consider the case that the participant's hands cover the candy: from our pilot test, we found that the participant tended to cover some portion of the candy with his hands while working on the candy. We don't want to misclassify this instance as fail. We add more image samples on this case to avoid misclassification.  
 * __Add both voice, words, and lighting feedback:__ Based on the feedback we received last week, we wish to improve our system by adding both voice, words, and lighting feedback. All of these feedbacks are designed to enhance convenience and promote user accessibility. 
   * When the system detects a crack on the candy, there will be a ‘You Fail’ message displayed on the screen with the same voice message coming out. A red light will flash in this case to represent a strong warning of failure. 
   * In another case, if the user wins the game, the system will say “You win this round” with the same message displayed on the screen. With these add-on functions, the users will not need to stare at a screen to figure out if they are doing well. Users with disabilities can also use the system easily with the assistance of voice.
@@ -328,7 +331,8 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 
 #### Prototype - Iteration 3
-We think about possible designs and implement these designs.
+We thought about a few possible designs and implemented these designs.
 * Possible Designs: ![2-design](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/2-design.jpg)
 
+We realized that the stability of our camera matters a lot in our scenario. So we went with the first design as it fixed the distance bewteen the candy and the camera. 
 
