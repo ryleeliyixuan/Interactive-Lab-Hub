@@ -225,6 +225,7 @@ This can be as simple as the boat detector earlier.
 Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
+
 We came up with 2 ideas, pitch them to potential users, and chose the second one (ie. Squid Game Candy Chanllenge).
 * __Ruoyu’s idea for Teachable Machine:__
   *  __Interaction:__ Measuring the connection between art visitors and pieces of art or relics in a museum is the core step. The goal is to quantify the time a user spends looking at a piece of art or relics, and compare to extract potential patterns. We can simplify the problem by calculating the time each user spends looking at different pieces of art. 
@@ -267,11 +268,6 @@ We flight test our prototype on Raspberry Pi and had following observations:
   * Another reason for failure is that the object border is not clear enough. Besides the shapes of the candy itself, the contrast between the candy and the surrounding would affect whether it can be detected correctly. 
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
-1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
-
 * __Are they aware of the uncertainties in the system?__
   * Users might not be fully aware of the uncertainties in the system unless specifically marked. Users will not be able to test the angle and height of the camera, they also will not pay much attention to the background and the room lights when playing this game. 
 * __How bad would they be impacted by a miss classification?__
@@ -299,10 +295,14 @@ During the lecture, we mentioned questions to help characterize a material:
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
 * __What can you use X for?__
   * We can use the observant system to detect cracked shapes. It can be used in this game from our initial setting. On a larger scale, it can also be used to detect if the floor is messy, if the shirt is dirty and if the painting is in the right place of the wall, all of them can be treated as a kind of cracked shape if we capture the out of range tracks or shapes. 
+  * [This system detects a circular candy that has been successfully carved out (Win). Video can be found here.](https://youtu.be/tpUeLUucN_o)
+  * [This system detects a circular candy that has been cracked (Fail). Video can be found here.](https://youtu.be/B9SR9n2ZWls)
 * __What is a good environment for X?__
   * A good environment would have good lighting which can present each candy clearly in the camera, and there should be enough contrast between each candy as well as the background.
+  * 
 * __What is a bad environment for X?__
   * A bad environment might be places without much lighting. This might cause the system to fail in detecting certain shapes from the background. Other factors like the colors and sizes of the candy can also influence the result. If the candy is too small with a broad background, the system will fail with no doubt. Places, where the colors are similar to the candies, are also a bad environment. 
+  * [If we place the camera too close to the candy, it's also considered as a bad environment. Video can be found here.](https://youtu.be/B-92lXdEl_U)
 * __When will X break? When it breaks how will X break?__
   * It will break when there is too much motion of the camera because the delay is quite bad. The low accuracy of the model will lead to the failure of the system.
 * __What are other properties/behaviors of X? How does X feel?__
@@ -312,10 +312,23 @@ During the lecture, we mentioned questions to help characterize a material:
 ### Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
+**\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
 #### Prototype - Iteration 2
-* In part 2 of our lab, we train our model for two shapes of two states. Our system is to determine whether the candy is cracked or not. Circles and triangles are the chosen shapes, and they have the states of cracked(F), not cracked(T). So there are four labels in our model. 
-* In this part, we wish to improve our system by adding both voice, words, and lighting feedback. All of these feedbacks are designed to enhance convenience and promote user accessibility. When the system detects a crack on the candy, there will be a ‘You Fail’ message displayed on the screen with the same voice message coming out. A red light will flash in this case to represent a strong warning of failure. In another case, if the user wins the game, the system will say “You win this round” with the same message displayed on the screen. With these add-on functions, the users will not need to stare at a screen to figure out if they are doing well. Users with disabilities can also use the system easily with the assistance of voice.
-* For future steps, we may want our system to interact with the users. A simple example would be a user saying “restart the game”, the system will restart immediately.
+* __Train our model for two shapes of two states:__ Our system is to determine whether the candy is cracked or not. Circles and triangles are the chosen shapes, and they have the states of cracked(F), not cracked(T). So there are four labels in our model. 
+  * [This system detects a triangular candy that has been successfully carved out (Win). Video can be found here.](https://youtu.be/jubUEWHmhjU)
+* __Further train our model for different environment:__ From the pilot test we ran with potential users in part 1, we figured out that we should further improve our model. And we made improvements in following aspects to avoid errors in different environments:
+  * 1. Add a background class
+  * 2. Add more class and train the model with 200+ images: so the model can works for more settings/environments (ie. lighting, distance between the candy and the device, background color).
+  * 3. Consider the case that the participant's hands cover the candy: from our pilot test, we found that the participant tended to cover some portion of the candy with his hands while working on the candy. We don't want to misclassify this instance as fail. We add more image samples on this case to avoid misclassification.  
+* __Add both voice, words, and lighting feedback:__ Based on the feedback we received last week, we wish to improve our system by adding both voice, words, and lighting feedback. All of these feedbacks are designed to enhance convenience and promote user accessibility. 
+  * When the system detects a crack on the candy, there will be a ‘You Fail’ message displayed on the screen with the same voice message coming out. A red light will flash in this case to represent a strong warning of failure. 
+  * In another case, if the user wins the game, the system will say “You win this round” with the same message displayed on the screen. With these add-on functions, the users will not need to stare at a screen to figure out if they are doing well. Users with disabilities can also use the system easily with the assistance of voice.
 
-**\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+
+#### Prototype - Iteration 3
+We think about possible designs and implement these designs.
+* Possible Designs: ![2-design](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%205/2-design.jpg)
+
+
