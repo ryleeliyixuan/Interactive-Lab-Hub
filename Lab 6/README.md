@@ -86,6 +86,32 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+* __Pet Camera__
+  * __Real-time alerts + Info Display:__ Get notified of any activity at home with instant sound and motion alerts. Alert the pet owners about the temperature and moisture levels of the environment. 
+  * __Smooth 2-way audio:__ Speak to pets and hear them bark or meow back. 
+  * __Body temperature tracker:__ The camera detects the pets and follows them using machine learning algorithms. The sensor will detect their body temperature and notify the pet owners if there’s a health issue. 
+  * __Check if the pets have drunk water:__ We will place the water fountain under the device. We will count every time when the pets drink water and alert the owner whether the animals drink enough water that day.  
+
+![a-design-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/a-design-2.jpg)
+
+* __Remote Garage Door Opener__
+  * The doorman can remotely control the garage door without actually presenting there.  
+  * The sender will detect the license plate and send back the plate number to the doorman who works in the lobby.
+  * The reader receives the plate number and displays it on the OLED screen. Once the doorman checks the plate number, he presses the button to open the garage door. 
+
+![a-design-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/a-design-1.jpg)
+
+* __Walkie Talkie__
+  * Connecting with your close friends with the design based on the message system. You can type a message or just talk to your friends directly. Also, more people can join as they form a group chat. 
+* __Emergency Contact with Doctors__
+  * The message system is for the communication between inpatients or patients staying in their home for further recovery and their doctors. If there is an emergency, the patient is capable of talking to their doctors and asking for help immediately. 
+* __Simple Communication in Construction site__
+  * Sometimes simple communication is needed in the construction site. For instance, if a bridge is under construction and only cars in a single way are allowed to pass through the bridge, the worker on one side of the bridge can use the prototype to contact their colleagues. Then the car in another way can be allowed to pass and a switch is done.
+
+
+
+
+
 ### Part C
 ### Streaming a Sensor
 
@@ -107,7 +133,15 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
 
+The touched interface is shown in the explorer. A screenshot can be found here: 
+
+![c-mqtt](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/c-mqtt.png)
+
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
+
+We added one button and implemented the data streaming with it. [A short video illustrateing how we implement the data streaming with it can be found here.](https://youtu.be/Y864tUGtfNU) We read the status of the button and encode it into "inquiry sent" once pressed. 
+
+![add-button](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/c-add-button.jpeg)
 
 
 ### Part D
@@ -141,6 +175,7 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
+Change the variable “topic” in line 58 for allowing any other user to publish their own color. The variable stands for an address, so if the user name is added after it, like ‘IDD/colors/panda’. Then this user is able to publish his color to the channel. Modified code is in [color_modified.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/color_modified.py).
 
 ### Part E
 ### Make it your own
@@ -154,6 +189,4 @@ Find at least one class (more are okay) partner, and design a distributed applic
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
-
-<!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
