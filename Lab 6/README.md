@@ -175,7 +175,7 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
-Change the variable “topic” in line 58 for allowing any other user to publish their own color. The variable stands for an address, so if the user name is added after it, like ‘IDD/colors/panda’. Then this user is able to publish his color to the channel. Modified code is in [color_modified.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/color_modified.py).
+* Change the variable “topic” in line 58 for allowing any other user to publish their own color. The variable stands for an address, so if the user name is added after it, like ‘IDD/colors/panda’. Then this user is able to publish his color to the channel. Modified code is in [color_modified.py](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/color_modified.py).
 
 ### Part E
 ### Make it your own
@@ -184,9 +184,18 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+* We are designing __a senior care daily check device.__ Many elderlies live alone and haven’t received much attention from others, especially during the pandemic. There are a number of cases where old people die out of sudden illness but no one discovers until the corpse smell is prevalent on the floor. Our system is aiming at eliminating such cases by enabling remote family members to keep an eye on the elderly through a single button for daily check-in. We nudged the check-in by reporting the local weather and didn’t use cameras to capture movements for security and privacy concerns.
+
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+![flow](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/c-flow.jpg)
+![system-1](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/c-system-1.jpg)
+![system-2](https://github.com/ryleeliyixuan/Interactive-Lab-Hub/blob/Fall2021/Lab%206/c-system-2.jpg)
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+
+[A final video of implementation can be found here.](https://youtu.be/c2siOMHmmY4)
+
+
 
